@@ -1,7 +1,13 @@
+import { ApiProperty } from '@nestjs/swagger';
 import { Document } from 'mongoose';
 
 export class Task extends Document {
-  id: number;
-  description: string;
-  completed: boolean;
+	@ApiProperty()
+	id: number;
+
+	@ApiProperty()
+	description: string;
+
+	@ApiProperty()
+	completed: boolean;
 }
